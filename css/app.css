@@ -49,3 +49,10 @@ body {
   border: 1px solid #fff;
   margin-bottom: 4%;
 }
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .item {
+    width: 100%;
+    margin-bottom: 4%;
+  }
+}
