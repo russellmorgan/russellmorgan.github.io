@@ -1,11 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subreference</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-<h1>Hello World</h1>
-<p>Time to make the donuts...</p>
+
+<div class="js-masonry" data-masonry-options='{ "columnWidth": ".item", "itemSelector": ".item" }'>
+
+<!-- start row -->
+<div class="row">
+
+  <div class="col-md-5 item">
+	  <div class="site-title">
+	      <h2>Russell Morgan</h2>
+	      <strong>Web & Mobile developer</strong>
+		  <div>
+		      <p>I make websites, apps and games for myself and others.</p>
+		      <p>I'm pretty good at HTML 5, Javascript, CSS3, Jquery, Appcelerator, Phonegap, Wordpress, Git, LESS & SASS, Unity 3D and a host of other technologies.</p>
+		      <p>On this site you'll find a list of stuff I've been up to lately.</p>
+		      <button class="btn btn-primary btn-xs"><a href="#">resume</a></button>
+	      </div>
+	    </div>
+  </div>
+  
+  <div class="col-md-4 item">
+  	<div class="project">
+	  <h4>Concept Farm</h4>
+	  <div class="details">
+	  	<p>The Concept Farm is an advertising agency based in NYC.
+	  	I was contracted to replace their existing Flash based site with a responsive html5 version.</p>
+	  	<p>The site is run by Wordpress with customized post types for easy updating of content.</p>
+	  	<a href="http://conceptfarm.com" target="_blank"><img src="img/thumb-cf.jpg" alt="The concept farm" class="img-responsive"></a>
+	  	<button class="btn btn-success btn-xs"><a href="http://conceptfarm.com" target="_blank">visit site</a></button>
+	  </div>
+	 </div>
+  </div>
+  
+  <div class="col-md-3 item">
+  	<div class="project">
+  	  <h4>Cheers Everybody</h4>
+  	  <div class="details">
+  	  	<p>This is a mobile application available in the Apple app store that teaches you how to say "cheers" in various languages. It was built using phonegap and makes use of the zepto.js library</p>
+  	  	<p>My goal in creating this personal project was to see how close I could get to "native" performance using just HTML 5</p>
+  	  	<p>You can check out what makes it tick by browsing my github repo</p>
+  	  	<img src="img/thumb-cheers.jpg" alt="Cheers Everybody" class="img-responsive">
+  	  	<button class="btn btn-success btn-xs"><a href="https://itunes.apple.com/us/app/cheers-everybody/id358981953?mt=8" target="_blank">download app</a></button>
+  	  </div>
+  	 </div>
+  	
+  </div>
+  
+</div>
+<!-- end row -->
+
+
+<!-- start row -->
+<div class="row">
+
+  <div class="col-md-4 item">
+  	<div class="project">
+	  <h4>Rotary Club</h4>
+	  <div class="details">
+	  	<p>I was asked by Siegel & Gale to implement a parallax background effect for the Rotary Club homepage</p>
+	  	Using the stellar.js jquery plugin I was able to revise the existing HTML and work with the design team to tweak the amount of parallax for each element until the site had exactly the right balance of readability and animation.</p>
+	  	<a href="https://www.rotary.org/" target="_blank"><img src="img/thumb-rotary.jpg" alt="Rotary Club" class="img-responsive"></a>
+	  	
+	  	<button class="btn btn-success btn-xs"><a href="https://www.rotary.org/" target="_blank">visit site</a></button>
+	  </div>
+	 </div>
+  </div>
+  
+  <div class="col-md-4 item">
+  	<div class="project">
+  	  <h4>Super Flappy Fishy</h4>
+  	  <div class="details">
+  	  	<p>This is a mobile game for iphone. Arguably an "improved" version of Flappy Bird I wanted to challenge myself to see how quickly I could implement a game everyone was talking about.</p>
+  	  	<p>Turns out the answer is 3 days. (and about 3 more weeks to iron out the iAd implementation in a way that made Apple happy)</p>
+  	  	<button class="btn btn-success btn-xs"><a href="https://itunes.apple.com/us/app/super-flappy-fishy/id820388547?mt=8" target="_blank">download app</a></button>
+  	  	
+  	  </div>
+  	 </div>
+  </div>
+  
+  <div class="col-md-4 item">
+  	<div class="project">
+  	  <h4>Cheers Everybody</h4>
+  	  <div class="details">
+  	  	<p>This is a mobile application available in the Apple app store that teaches you how to say "cheers" in various languages. It was built using phonegap and makes use of the zepto.js library</p>
+  	  	<p>My goal in creating this personal project was to see how close I could get to "native" performance and feel using just html5/css3.</p>
+  	  </div>
+  	 </div>
+  </div>
+  
+</div>
+<!-- end row -->
+
+<!-- end container -->
+</div>
+
 
 <!-- load up scripts after -->
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
