@@ -186,6 +186,7 @@
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="js/masonry.pkgd.min.js"></script>
+<!--<script src="js/jquery.transit.min.js"></script>-->
 
 <script>
 <!-- init masonry -->
@@ -200,6 +201,17 @@ $(document).ready(function() {
 	};
 	//masonry is overlapping vertically, give the browser 100ms to be ready
 	window.setTimeout(initGrid, 100);
+	
+	//highlight selected project (to do: kinda jumpy...)
+//	$(".item").hover(
+//		function() {
+//			var item = $(this);
+//			$(".item").not(item).transition({ opacity:0.5, delay:100 })
+//		},
+//		function() {
+//			var item = $(this);
+//			$(".item").not(item).transition({ opacity:1, delay:100 })
+//	});
 });
 
 </script>

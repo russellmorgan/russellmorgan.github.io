@@ -28,6 +28,7 @@ body {
   width: 30%;
   margin-bottom: 20px;
   float: left;
+  overflow: hidden;
 }
 .project {
   background: #3299BB;
