@@ -1,28 +1,28 @@
 body {
-  background: #424242;
-  color: #e9e9e9;
+  background: #fff;
+  color: #111;
   font-family: 'Varela', sans-serif;
   padding: 2%;
 }
 .site-title {
-  background: #ff9900;
-  box-shadow: 0px 0px 4px 2px #333;
+  background: #000;
+  box-shadow: 0px 0px 4px 2px #eee;
   padding: 6%;
   width: 99%;
 }
 .site-title h2 {
-  color: #FFF;
+  color: #000;
   padding: 0;
   margin: 0;
 }
 .site-title strong {
-  color: #fff;
+  color: #000;
 }
 .site-title div {
   margin-top: 4%;
 }
 .site-title div a {
-  color: #fff;
+  color: #333;
 }
 .item {
   width: 30%;
@@ -31,10 +31,10 @@ body {
   overflow: hidden;
 }
 .project {
-  background: #3299BB;
+  background: #fff;
   width: 99%;
   padding: 6%;
-  color: #E9E9E9;
+  color: #111;
   font-size: 0.9em;
   line-height: 130%;
   box-shadow: 0px 0px 4px 2px #333;
