@@ -18,7 +18,7 @@ body {
     margin:0;
     padding:1.25em;
     //get SF font working for mac and iOS
-    font: normal 100% system, -apple-system,
+    font: normal 16px system, -apple-system,
       ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
     color:$main-color;
 }
