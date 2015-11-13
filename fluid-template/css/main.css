@@ -8,7 +8,7 @@ a {
 body {
   margin: 0;
   padding: 2.5em;
-  font: normal 16px system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
+  font: normal 100% system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
   color: #333; }
 
 .container {
