@@ -1,4 +1,4 @@
-.ns, .container aside blockquote, .container aside h1 {
+.ns, h1, h2, h3, body, .container aside blockquote {
   padding: 0;
   margin: 0; }
 
@@ -12,15 +12,14 @@ small {
   font-size: .56em; }
 
 body {
-  margin: 0;
-  padding: 2.5em;
   font: normal 100% system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
   color: #333;
   background: #fff; }
 
 .container {
   display: flex;
-  flex-direction: column-reverse; }
+  flex-direction: column-reverse;
+  padding: 2em; }
   .container main h2 {
     font-size: 1.31em; }
   .container main h2 + span {
@@ -29,7 +28,8 @@ body {
     line-height: 140%; }
   .container aside {
     border-bottom: 1px solid #333;
-    padding-bottom: 1.25em; }
+    padding-bottom: 1.25em;
+    margin-bottom: 1.25em; }
     .container aside blockquote {
       font-size: .75em; }
     .container aside nav {
