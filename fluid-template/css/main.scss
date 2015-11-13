@@ -1,0 +1,32 @@
+//Helpers
+
+.ns {
+    //no space for this element...
+    padding:0;
+    margin:0;
+}
+
+a {
+    color:#333;
+}
+
+body {
+    margin:0;
+    padding:1.25em;
+    //get SF font working for mac and iOS
+    font: normal 100% system, -apple-system,
+      ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
+    color:#111;
+}
+
+aside {
+    font-size:0.75em;
+    ul {
+        @extend .ns;
+        list-style: none;
+    }
+}
+
+footer {
+    font-size:0.56em;
+}
