@@ -7,7 +7,7 @@ a {
 
 body {
   margin: 0;
-  padding: 1.25em;
+  padding: 2.5em;
   font: normal 16px system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
   color: #333; }
 
@@ -23,8 +23,6 @@ body {
     .container aside ul {
       margin-top: 1.25em;
       list-style: none; }
-    .container aside span {
-      font-size: 0.75em; }
     .container aside h1 {
       font-size: 3.125em; }
 
