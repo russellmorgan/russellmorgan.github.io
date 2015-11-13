@@ -1,4 +1,4 @@
-.ns, aside ul {
+.ns, .container aside ul, .container aside h1 {
   padding: 0;
   margin: 0; }
 
@@ -9,12 +9,26 @@ body {
   margin: 0;
   padding: 1.25em;
   font: normal 100% system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
-  color: #111; }
+  color: #333; }
 
-aside {
-  font-size: 0.75em; }
-  aside ul {
-    list-style: none; }
+.container {
+  display: flex;
+  flex-direction: column-reverse; }
+  .container main h2 {
+    font-size: 1.3125em; }
+  .container aside {
+    border-bottom: 1px solid #333;
+    padding-bottom: 1.25em; }
+    .container aside ul {
+      margin-top: 1.25em;
+      list-style: none;
+      font-size: 0.75em; }
+    .container aside span {
+      font-size: 0.75em; }
+    .container aside h1 {
+      font-size: 1.75em; }
 
 footer {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
   font-size: 0.56em; }

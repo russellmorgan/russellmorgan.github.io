@@ -1,4 +1,8 @@
-//Helpers
+//NOTES:
+//Font size is 16px on desktop
+//1.25em is 20px, use this as your universal padding to keep gutters consistent
+
+$main-color:#333;
 
 .ns {
     //no space for this element...
@@ -16,17 +20,39 @@ body {
     //get SF font working for mac and iOS
     font: normal 100% system, -apple-system,
       ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
-    color:#111;
+    color:$main-color;
 }
 
-aside {
-    font-size:0.75em;
-    ul {
-        @extend .ns;
-        list-style: none;
+.container {
+    display: flex;
+    flex-direction: column-reverse;
+    main {
+        h2 {
+            font-size:1.3125em;
+        }
     }
+    aside {
+        border-bottom:1px solid $main-color;
+        padding-bottom: 1.25em;
+        ul {
+            @extend .ns;
+            margin-top:1.25em;
+            list-style: none;
+            font-size:0.75em;
+        }
+        span {
+            font-size:0.75em;
+        }
+        h1 {
+            @extend .ns;
+            font-size:1.75em;
+        }
+    }    
 }
+
 
 footer {
+    padding-top:1.25em;
+    padding-bottom:1.25em;
     font-size:0.56em;
 }
