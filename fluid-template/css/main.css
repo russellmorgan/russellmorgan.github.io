@@ -1,9 +1,12 @@
-.ns, .container aside ul, .container aside h1 {
+.ns, .container aside blockquote, .container aside h1 {
   padding: 0;
   margin: 0; }
 
 a {
   color: #333; }
+
+h1, h2, h3 {
+  font-family: Helvetica, "Helvetica Neue"; }
 
 body {
   margin: 0;
@@ -20,9 +23,13 @@ body {
   .container aside {
     border-bottom: 1px solid #333;
     padding-bottom: 1.25em; }
-    .container aside ul {
+    .container aside blockquote {
+      font-size: 1em; }
+    .container aside nav {
       margin-top: 1.25em;
-      list-style: none; }
+      display: flex;
+      justify-content: space-between;
+      font-size: 1em; }
     .container aside h1 {
       font-size: 3.125em; }
 
