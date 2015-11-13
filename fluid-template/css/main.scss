@@ -3,6 +3,7 @@
 //1.25em is 20px, use this as your universal padding to keep gutters consistent
 
 $main-color:#333;
+$background:#fff;
 
 .ns {
     //no space for this element...
@@ -18,6 +19,10 @@ h1,h2,h3 {
     font-family: Helvetica, "Helvetica Neue";
 }
 
+small {
+    font-size:.56em;
+}
+
 body {
     margin:0;
     padding:2.5em;
@@ -25,15 +30,21 @@ body {
     font: normal 100% system, -apple-system,
       ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
     color:$main-color;
+    background:$background;
 }
 
 .container {
     display: flex;
     flex-direction: column-reverse;
-    font-size:1.3125em;
     main {
         h2 {
-            font-size:2.31em;
+            font-size:1.31em;
+        }
+        h2+span {
+            font-size:.75em;
+        }
+        p {
+            line-height: 140%;
         }
     }
     aside {
@@ -41,17 +52,16 @@ body {
         padding-bottom: 1.25em;
         blockquote {
             @extend .ns;
-            font-size:1em;
+            font-size:.75em;
         }
         nav {
             margin-top:1.25em;
             display:flex;
             justify-content:space-between;
-            font-size:1em;
         }
         h1 {
             @extend .ns;
-            font-size:3.125em;
+            font-size:2.31em;
         }
     }    
 }
@@ -59,5 +69,4 @@ body {
 
 footer {
     padding-top:1.25em;
-    padding-bottom:1.25em;
 }
