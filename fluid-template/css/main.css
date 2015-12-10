@@ -18,7 +18,7 @@ body {
 
 .container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   padding: 2em; }
   .container main h2 {
     font-size: 1.31em; }
@@ -27,7 +27,7 @@ body {
   .container main p {
     line-height: 140%; }
   .container aside {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #e6e6e6;
     padding-bottom: 1.25em;
     margin-bottom: 1.25em; }
     .container aside blockquote {
