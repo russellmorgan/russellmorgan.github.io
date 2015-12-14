@@ -1,4 +1,4 @@
-.ns, h1, h2, h3, body, .container aside blockquote {
+.ns, h1, h2, h3, body, .container aside blockquote, .container aside nav ul {
   padding: 0;
   margin: 0; }
 
@@ -19,7 +19,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  padding: 2em; }
+  padding: 3.3em 2em; }
   .container main h2 {
     font-size: 1.31em; }
   .container main h2 + span {
@@ -33,9 +33,45 @@ body {
     .container aside blockquote {
       font-size: .75em; }
     .container aside nav {
-      margin-top: 1.25em;
-      display: flex;
-      justify-content: space-between; }
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      padding: 0.6em;
+      color: #fff;
+      text-align: right; }
+      .container aside nav a {
+        color: #fff;
+        text-decoration: none; }
+      .container aside nav ul {
+        list-style: none;
+        text-align: left;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 4em 2em;
+        transform: translate3d(0, -100em, 0);
+        transition: all 1s ease-in-out; }
+        .container aside nav ul li {
+          padding-bottom: 0.6em; }
+          .container aside nav ul li a {
+            font-size: 1em; }
+        .container aside nav ul div.close {
+          background: #fff;
+          color: #333;
+          border-radius: .8em;
+          font-weight: bold;
+          position: fixed;
+          top: 2em;
+          right: 2em;
+          padding: .6em 1em .6em 1em;
+          font-size: .6em; }
+      .container aside nav.active ul {
+        transform: translate3d(0, 0, 0); }
     .container aside h1 {
       font-size: 2.31em; }
 
