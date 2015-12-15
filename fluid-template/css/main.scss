@@ -1,120 +1,166 @@
-//NOTES:
-//Font size is 16px on desktop
+//USAGE
+//Font size is assumed 16px
+//Convert any pixel requirements with the following formula: target ÷ context = result
+//Example: A 1024px wide element would be 64em (1024/16)
 //1.25em is 20px, use this as your universal padding to keep gutters consistent
 
+//Theme colors
 $text-color:#333;
 $background:#fff;
+$link-color:#fff;
 
+//remove any default spacing for a block level element
 .ns {
-    //no space for this element...
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
-
 a {
-    color:#333;
+    color: $link-color;
 }
-
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     font-family: Helvetica, "Helvetica Neue";
     @extend .ns;
 }
-
 small {
-    font-size:.56em;
+    font-size: .56em;
 }
-
 body {
     @extend .ns;
-    //get SF font working for mac and iOS
-    font: normal 100% system, -apple-system,
-      ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
-    color:$text-color;
-    background:$background;
+    //Use native font for each platform 
+    font: normal 100% system, -apple-system, ".SFNSDisplay-Regular", "Roboto", "Helvetica Neue", "Lucida Grande";
+    color: $text-color;
+    background: $background;
 }
-
+ nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    padding: 0.6em;
+    color: $background;
+    text-align: right;
+    a {
+        color: $link-color;
+        text-decoration: none;
+    }
+    //hide the submenu until requested.
+    ul {
+        @extend .ns;
+        list-style: none;
+        text-align: left;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 4em 2em;
+        //change these values to have the menu slide in from any direction, defaults to top
+        transform: translate3d(0, -100em, 0);
+        transition: all .6s ease-out;
+        li {
+            padding-bottom: 0.6em;
+            a {
+                font-size: 1em;
+            }
+        }
+        div.close {
+            background: $background;
+            color: $text-color;
+            border-radius: .8em;
+            font-weight: bold;
+            position: fixed;
+            top: 2em;
+            right: 2em;
+            padding: .6em 1em .6em 1em;
+            font-size: .6em;
+        }
+    }
+    &.active {
+        ul {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
 .container {
     display: flex;
-    flex-direction: column;
-    padding:3.3em 2em;
+    flex-direction:column-reverse;
+    padding: 4em 2em 0em 2em;
     main {
         h2 {
-            font-size:1.31em;
+            font-size: 1.31em;
         }
         h2+span {
-            font-size:.75em;
+            font-size: .75em;
         }
         p {
             line-height: 140%;
         }
     }
     aside {
-        border-bottom:1px solid lighten($text-color, 70%);
-        padding-bottom: 1.25em;
-        margin-bottom:1.25em;
+        padding-top:1.25em;
+        border-top:1px solid lighten($text-color,70);
         blockquote {
             @extend .ns;
-            font-size:.75em;
+            font-size: .75em;
         }
-        nav {
-            position:absolute;
-            top:0;
-            left:0;
-            width:100%;
-            background : #000;
-            padding:0.6em;
-            color:$background;
-            text-align: right;
-            a {
-                color:$background;
-                text-decoration: none;
-            }
-            //hide the submenu until requested.
-            ul {
-                @extend .ns;
-                list-style: none;
-                text-align: left;
-                position: fixed;
-                top:0;
-                left:0;
-                bottom:0;
-                right:0;
-                background:rgba(0,0,0,0.9);
-                padding:4em 2em;
-                //change these values to have the menu slide in from any direction, defaults to top
-                transform:translate3d(0,-100em,0);
-                transition: all 1s ease-in-out;
-                li {
-                    padding-bottom:0.6em;
-                    a {
-                        font-size:1em;
-                    }
-                }
-                div.close {
-                    background: $background;
-                    color:$text-color;
-                    border-radius: .8em;
-                    font-weight: bold;
-                    position:fixed;
-                    top:2em;
-                    right:2em;
-                    padding:.6em 1em .6em 1em;
-                    font-size:.6em;
-                }
-            }
-            &.active {
-                ul {
-                    transform:translate3d(0,0,0);
-                }
-            }
-        }
-        h1 {
-            font-size:2.31em;
-        }
-    }    
+    }
+}
+footer {
+    padding: 2em;
 }
 
 
-footer {
-    padding-top:1.25em;
+//Desktop styles
+@media (min-width: 64em) {
+    //hide anything mobile specific
+    .mobile {
+        display: none;
+    }
+     nav {
+        display: block;
+        position: relative;
+        width: auto;
+        padding:1.25em;
+        font-size:0.8em; 
+        ul {
+            max-width:76rem;
+            margin:auto;
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+            padding: 0;
+            align-items: baseline;
+            transform: translate3d(0, 0, 0);
+            background:transparent;
+            li {
+                padding:0em 2.5em 0em 0em;
+                &:hover {
+                    background:$background;
+                    color:$text-color;
+                }
+            }
+        }
+    }
+    .container {
+        max-width: 76em;
+        margin: auto;
+        flex-direction: row;
+        main {
+            width: 60.8em;
+        }
+        aside {
+            width: 12.7em;
+            padding:0em 2.5em 0em 0em;
+            border:0;
+        }
+    }
+    footer {
+        max-width: 76rem;
+        margin: auto;
+        text-align:right;
+    }
 }
