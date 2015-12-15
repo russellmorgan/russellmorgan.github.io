@@ -8,6 +8,7 @@
 $text-color:#333;
 $background:#fff;
 $link-color:#fff;
+$nav-background:#000;
 
 //remove any default spacing for a block level element
 .ns {
@@ -34,14 +35,16 @@ body {
     background: $background;
 }
  nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #000;
-    padding: 0.6em;
+    position: relative;
+    width:100%;
+    overflow:hidden; 
+    background: $nav-background;
+    padding: 0.6em 0em 0.6em 0em    ;
     color: $background;
     text-align: right;
+     span:first-child {
+         padding-right:0.6em;
+     } 
     a {
         color: $link-color;
         text-decoration: none;
@@ -85,14 +88,24 @@ body {
         }
     }
 }
+.banner-image {
+    height: auto;
+    overflow:hidden;
+    img {
+        max-width: 100%;
+        display: block;
+    }
+}
+
 .container {
     display: flex;
-    flex-direction:column-reverse;
-    padding: 4em 2em 0em 2em;
+    flex-direction:column;
+    padding: 2em 2em 0em 2em;
     main {
         h2 {
             font-size: 1.31em;
         }
+        h1+span,
         h2+span {
             font-size: .75em;
         }
@@ -124,8 +137,9 @@ footer {
         display: block;
         position: relative;
         width: auto;
-        padding:1.25em;
-        font-size:0.8em; 
+        font-size:0.8em;
+        font-weight: bold; 
+        padding:0; 
         ul {
             max-width:76rem;
             margin:auto;
@@ -133,34 +147,41 @@ footer {
             justify-content: flex-start;
             position: relative;
             padding: 0;
-            align-items: baseline;
+            align-items: stretch;
             transform: translate3d(0, 0, 0);
             background:transparent;
             li {
-                padding:0em 2.5em 0em 0em;
+                padding:1.25em;
                 &:hover {
                     background:$background;
-                    color:$text-color;
+                    a { 
+                        color:$text-color; 
+                    }
                 }
             }
         }
+    }
+    //remove this when ready...
+    .banner-image {
+        max-height:20em;
     }
     .container {
         max-width: 76em;
         margin: auto;
         flex-direction: row;
+        //You can switch this to "center" if you'd like the aside to be vertically centered with the content
+        align-items: flex-start;
         main {
-            width: 60.8em;
+            width: 54em;
         }
         aside {
-            width: 12.7em;
-            padding:0em 2.5em 0em 0em;
+            width: 19.5em;
+            padding:0em 0em 0em 2.5em;
             border:0;
         }
     }
     footer {
         max-width: 76rem;
         margin: auto;
-        text-align:right;
     }
 }
