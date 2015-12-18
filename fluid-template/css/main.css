@@ -1,23 +1,39 @@
 .ns, h1,
 h2,
-h3, body, nav ul, .container aside blockquote {
+h3, p, body, nav ul, .container aside blockquote, .container .skills-list ul {
   padding: 0;
   margin: 0; }
 
 a {
-  color: #fff; }
+  color: #000; }
 
 h1,
 h2,
 h3 {
-  font-family: Helvetica, "Helvetica Neue"; }
+  font-family: Helvetica, "Helvetica Neue";
+  line-height: 120%; }
+
+h1 {
+  font-size: 2.3em; }
+
+h2 {
+  font-size: 1.75em;
+  color: #333333;
+  padding-top: 0.625em; }
 
 small {
   font-size: .56em; }
 
+p {
+  margin-bottom: 0.3em;
+  padding-bottom: 0.3em; }
+
+ul {
+  padding-left: 1.25em; }
+
 body {
   font: normal 100% system, -apple-system, ".SFNSDisplay-Regular", "Roboto", "Helvetica Neue", "Lucida Grande";
-  color: #333;
+  color: #000;
   background: #fff; }
 
 nav {
@@ -51,7 +67,7 @@ nav {
         font-size: 1em; }
     nav ul div.close {
       background: #fff;
-      color: #333;
+      color: #000;
       border-radius: .8em;
       font-weight: bold;
       position: fixed;
@@ -80,11 +96,21 @@ nav {
     font-size: .75em; }
   .container main p {
     line-height: 140%; }
+  .container section {
+    padding-bottom: 4em; }
   .container aside {
     padding-top: 1.25em;
-    border-top: 1px solid #e6e6e6; }
+    border-top: 1px solid #b3b3b3; }
     .container aside blockquote {
       font-size: .75em; }
+  .container .skills-list {
+    overflow: hidden; }
+    .container .skills-list ul {
+      padding-top: 1.25em; }
+      .container .skills-list ul li {
+        float: left;
+        width: 40%;
+        padding-right: 1.25em; }
 
 footer {
   padding: 2em; }
@@ -115,7 +141,7 @@ footer {
         nav ul li:hover {
           background: #fff; }
           nav ul li:hover a {
-            color: #333; }
+            color: #000; }
 
   .banner-image {
     max-height: 20em; }
