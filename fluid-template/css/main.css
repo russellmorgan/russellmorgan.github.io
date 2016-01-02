@@ -48,7 +48,8 @@ nav {
     padding-right: 0.6em; }
   nav a {
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    text-transform: uppercase; }
   nav ul {
     list-style: none;
     text-align: left;
@@ -97,7 +98,7 @@ nav {
   .container main p {
     line-height: 140%; }
   .container section {
-    padding-bottom: 4em; }
+    padding-bottom: 2.5em; }
   .container aside {
     padding-top: 1.25em;
     border-top: 1px solid #b3b3b3; }
@@ -114,6 +115,13 @@ nav {
 
 footer {
   padding: 2em; }
+
+.work img {
+  border: 1px solid #cccccc;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 0.62em;
+  margin-top: 0.62em; }
 
 @media (min-width: 64em) {
   .mobile {
