@@ -1,213 +1,99 @@
-<!DOCTYPE html>
-<html ng-app="subrefApp">
+<html>
 <head>
-<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Subreference</title>
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	<link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width">
+    <title>Russell Morgan</title>
 </head>
+
 <body>
-
-<div class="masonry" ng-controller="portfolioCtrl">
-
-
-
-
-  <div class="item">
-	  <div class="project" style="background:#eee">
-	      <h4>Russell Morgan</h4>
-	      Web & Mobile developer<br><br>
-		  <div>
-		      <p>I make websites, apps and games for myself and others.</p>
-		      <p>I'm pretty good at HTML 5, Javascript, CSS3, Jquery, Appcelerator, Phonegap, Wordpress, Git, LESS & SASS, Unity 3D and a host of other technologies.</p>
-		      <p>This page contains samples of what I've been working on.</p>
-		      <button class="btn btn-success btn-xs"><a href="https://docs.google.com/document/d/1Y9m7jYUbE3KdsMp6P8Y7fRURNw8FfctkEhK4lgks0Y0/edit?usp=sharing" target="_blank">resume</a></button>
-	      </div>
-	    </div>
-  </div>
-  
-   <div class="item" ng-repeat="portfolio in portfolios">
-   	<div class="project">
-   	 <h4>{{portfolio.title}}</h4>
-   	 <div class="details">
-   	 	<div ng-bind-html="portfolio.content"></div>
-   	 	<img ng-src="img/{{portfolio.thumb}}" class="img-responsive" alt="{{portfolio.thumb}}">
-   	 	<button class="btn btn-success btn-xs"><a href="{{portfolio.link}}" target="_blank">visit site</a></button>
-   	 </div>
-   	</div>
-   </div>
-  
-
-  
-  <div class="item">
-  	<div class="project">
-  	  <h4>Cheers Everybody</h4>
-  	  <div class="details">
-  	  	<p>This is a mobile application available in the Apple app store that teaches you how to say "cheers" in various languages. It was built using phonegap and makes use of the zepto.js library.</p>
-  	  	<p>The goal in creating this personal project was to see how close I could get to "native" performance using just HTML5.</p>
-  	  	<p>You can check out what makes it tick by browsing my <a href="https://github.com/russellmorgan/cheers">github repo</a>.</p>
-  	  	<img src="img/thumb-cheers.png" alt="Cheers Everybody" class="img-responsive">
-  	  	<button class="btn btn-success btn-xs"><a href="https://itunes.apple.com/us/app/cheers-everybody/id358981953?mt=8" target="_blank">download app</a></button>
-  	  </div>
-  	 </div>
-  	
-  </div>
-  
-
-  <div class="item">
-  	<div class="project">
-	  <h4>Rotary Club</h4>
-	  <div class="details">
-	  	<p>I was asked by Siegel & Gale to implement a parallax background effect for the Rotary Club homepage.</p>
-	  	Using the stellar.js jquery plugin I was able to revise the existing HTML and work with the design team to tweak the amount of parallax for each element until the site had exactly the right balance of readability and animation.</p>
-	  	<img src="img/thumb-rotary.jpg" alt="Rotary Club" class="img-responsive">
-	  	
-	  	<button class="btn btn-success btn-xs"><a href="https://www.rotary.org/" target="_blank">visit site</a></button>
-	  </div>
-	 </div>
-  </div>
-  
-  <div class="item">
-  	<div class="project">
-  	  <h4>Super Flappy Fishy</h4>
-  	  <div class="details">
-  	  	<p>This is a mobile game for iphone. Arguably an "improved" version of Flappy Bird I wanted to challenge myself to see how quickly I could implement a game everyone was talking about.</p>
-  	  	<p>Turns out the answer is 3 days. (and about 3 more weeks to iron out the iAd implementation in a way that made Apple happy)</p>
-  	  	<p>And about the name? You have NO idea how hard it was to secure a name with the word "flappy" in it when I made this thing.</p>
-  	  	<img src="img/thumb-fishy.jpg" alt="Super Flappy Fishy" class="img-responsive">
-  	  	<button class="btn btn-success btn-xs"><a href="https://itunes.apple.com/us/app/super-flappy-fishy/id820388547?mt=8" target="_blank">download app</a></button>
-  	  	
-  	  </div>
-  	 </div>
-  </div>
-  
-  <div class="item">
-  	<div class="project">
-  	  <h4>La Prairie Swiss Ice Crystals</h4>
-  	  <div class="details">
-  	  	<p>I worked with Isobar to help bring to life the experience of visiting the Swiss Mountains in search of  rare flowers and algae.</p>
-  	  	<p> It uses javascript to detect mouse scroll (or finger swipe) and then repositions the content at various speeds and play HTML 5 video to create an immersive experience.</p>
-  	  	<img src="img/thumb-swiss.jpg" alt="Swiss Ice Crystals" class="img-responsive">
-		<button class="btn btn-success btn-xs"><a href="http://www.laprairie.com/default/quest-for-timeless-beauty-d.html" target="_blank">visit site</a></button>
-  	  </div>
-  	 </div>
-  </div>
-
-
-
-  <div class="item">
-  	<div class="project">
-	  <h4>Waters Part Selector</h4>
-	  <div class="details">
-	  	<p>Another project for Isobar, this is an iPad only app that uses HTML 5, phonegap and jquery mobile that allows users to search for parts that will fit their installed equipment.</p>
-	  	</p>
-	  	<img src="img/thumb-waters.jpg" alt="Waters ipad app" class="img-responsive">
-	  	
-	  	<button class="btn btn-success btn-xs"><a href="https://itunes.apple.com/us/app/waters-part-selector/id438689024?mt=8" target="_blank">download app</a></button>
-	  </div>
-	 </div>
-  </div>
-  
-  <div class="item">
-  	<div class="project">
-  	  <h4>Overall Murals</h4>
-  	  <div class="details">
-  	  	<p>I worked with Frank Collective to create this Wordpress powered site. I've done a lot of soup to nuts custom WP stuff over the years...</p>
-  	  	<img src="img/thumb-overall.jpg" alt="Overall" class="img-responsive">
-  	  	<button class="btn btn-success btn-xs"><a href="http://www.overallmurals.com" target="_blank">visit site</a></button>
-  	  	
-  	  </div>
-  	 </div>
-  </div>
-  
-  <div class="item">
-  	<div class="project">
-  	  <h4>Potatopia</h4>
-  	  <div class="details">
-  	  	<p>Another Wordpress powered site with Frank Collective. (did I mention I did their <a href="http://frankcollective.com" target="_blank" style="text-decoration:underline">site</a> as well?) The challenge here was using multiple WP post types to power a single page site</p>
-  	  	<img src="img/thumb-potato.jpg" alt="potatopia" class="img-responsive">
-		<button class="btn btn-success btn-xs"><a href="http://potatopia.com" target="_blank">visit site</a></button>
-  	  </div>
-  	 </div>
-  </div>
-  
-
-  <div class="item">
-  	<div class="project">
-	  <h4>Bad Fortune Cookie</h4>
-	  <div class="details">
-	  	<p>A personal weekend project to try out my newly minted skills as a certified Appcelerator developer. The cookie dispenses funny misfortunes which were all written by a good friend of mine. </p>
-	  	<p>It's looking a bit long in the tooth now as I built it back when I had a non-retina iphone but still good for a laugh.</p>
-	  	</p>
-	  	<img src="img/thumb-cookie.jpg" alt="Bad Fortune Cookie" class="img-responsive">
-	  	
-	  	<button class="btn btn-success btn-xs"><a href="https://itunes.apple.com/us/app/bad-fortune-cookie/id431158967?mt=8" target="_blank">download app</a></button>
-	  </div>
-	 </div>
-  </div>
-  
-  <div class="item">
-  	<div class="project">
-  	  <h4>Other Stuff</h4>
-  	  <div class="details">
-  	  	<p>I'm starting to run out of steam so I'll use this box to give you a quick hit list of other projects & clients I've been involved with over the past few years:</p>
-  	  	<ul>
-  	  		<li>American Express (Custom Kindle book)</li>
-  	  		<li>Sotheby's preferred access</li>
-  	  		<li>Waters.com</li>
-  	  		<li>Sony One Stadium</li>
-  	  		<li>HBO.com prototype for tablets</li>
-  	  		<li>Cinemax</li>
-  	  		<li>Carat Media</li>
-  	  		<li>BlueZones Project</li>
-  	  	</ul>
-  	  </div>
-  	 </div>
-  </div>
-  
-  <div class="item">
-  	<div class="project">
-  	  <h4>Thanks & Goodbye!</h4>
-  	  <div class="details">
-		<img src="img/thumb-bye.jpg" alt="adios" class="img-responsive">
-		<button class="btn btn-success btn-xs"><a href="https://www.linkedin.com/pub/russell-morgan/0/7b9/721" target="_blank">linked in</a></button>
-  	  </div>
-  	 </div>
-  </div>
-
-
-<!-- end container -->
-</div>
-
-
-<!-- load up scripts after -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular-sanitize.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/app.js"></script>
-
-
-<script>
-<!-- init masonry -->
-$(document).ready(function() {
-	var container = $('.masonry');
-	var initGrid = function() {
-		container.masonry({
-		columnWidth: '.item',
-		itemSelector: '.item',
-		gutter: 20
-		})
-	};
-	//masonry is overlapping vertically, give the browser 500ms to be ready
-	window.setTimeout(initGrid, 500);
-});
-
-</script>
-</body>
+    
+    <nav ontouchstart="this.className='active'" id="menu">
+        <strong class="mobile">Menu</strong>
+        <ul>
+            <li><a href="work.html">Recent Work</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="https://github.com/russellmorgan" target="_blank">GitHub</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <div class="close mobile" ontouchend="document.getElementById('menu').className=''">CLOSE</div>
+        </ul>        
+    </nav>
+    
+    <div class="container">        
+        <main>
+            <section>
+                <h1>I'm Russell.<br>
+                I build beautiful, fast & responsive websites that make users smile.</h1>
+            </section>
+            
+            <section>
+                <h3>More about me</h3>
+                <p>I'm a front end developer based in Brooklyn, New York with over 20 years of experience.  
+                HTML5, CSS3 and Javascript are my tools of choice.</p>
+                <ul>
+                    <li>Here's a selection of my <a href="work.html">recent work.</a></li>
+                    <li>You can <a href="">contact me</a> in all sorts of ways.</li>
+                    <li>I also have a <a href="">blog</a> I write that may interest other front end developers.</li>
+                </ul>
+            </section>
+            
+            
+            <section>
+                <h3>Skill Set</h3>
+                Here is a sampling of some my skills, but I'm also an adept and fast learner if there's a specific requirement.
+                <div class="skills-list">
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Javascript</li>
+                        <li>Wordpress</li>
+                        <li>Angular</li>
+                        <li>JQuery</li>
+                        <li>Canvas</li>
+                        <li>SVG</li>
+                        <li>WebGL</li>
+                        <li>Foundation 5</li>
+                        <li>Bootstrap 3</li>
+                        <li>PureCSS</li>
+                        <li>Phone Gap</li>
+                        <li>Appcelerator</li>
+                        <li>Swift</li>
+                        <li>Git</li>
+                        <li>Grunt & Gulp</li>
+                        <li>Shopify</li>
+                        <li>Unity3D</li>
+                        <li>Jekyll</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h3>About this site</h3>
+                <p>My calling card is this site. It's fast and responsive and uses no external libraries that would potentially slow things down. I wanted to work with the (now amazing) capabilities of the browser and see how lean I could make the code.</p>
+                <p>If you're a developer you might find a version of this code a good starting point for your next HTML5 project. The source, along with a few example layouts and color schemes is <a href="">available on Github</a>. I've also used this to make the <a href="">Jeckyll theme</a> that powers my blog.</p>
+            </section>
+            
+            <section>
+                <h3>Process</h3>
+                 <p>I'm comfortable creating code from both wireframes and design comps. I work equally well as part of a larger team, something I do frequently with companies like <a href="http://www.isobar.com" target="_blank">Isobar</a>, and small agencies such as <a href="http://monacolange.com" target="_blank">Monaco Lange</a> and <a href="http://www.frankcollective.com" target="_blank">Frank Collective.</a></p>
+            </section>
+            
+            <section>
+                <a name="contact"></a>
+                <h3>Contact</h3>
+                I'm currently available for both long and short term projects. 
+                <ul>
+                    <li>Email <a href="mailto:russell.morgan@gmail.com">russell.morgan@gmail.com</a></li>
+                    <li>Phone 646.387.3246</li>
+                    <li><a href="https://www.linkedin.com/in/russell-morgan-7217b9" target="_blank">Linked In</a></li>
+                </ul>
+            </section>
+        </main>
+        
+    </div>
+    
+    <footer>
+        <small>A website made by Russell Morgan.</small>
+    </footer>
+    
+</body>    
 </html>

@@ -15,7 +15,8 @@ h3 {
 
 h1 {
   font-size: 2.3em;
-  line-height: 100%; }
+  line-height: 100%;
+  margin-bottom: .62em; }
 
 h2 {
   font-size: 1.75em;
@@ -35,7 +36,7 @@ ul {
     padding-bottom: .31em; }
 
 body {
-  font: normal 100% system, -apple-system, ".SFNSDisplay-Regular", "Roboto", "Helvetica Neue", "Lucida Grande";
+  font: normal 100% system, -apple-system, ".SFNSDisplay-Regular", "Roboto", "Helvetica", "Helvetica Neue", "Lucida Grande";
   color: #000;
   background: #fff; }
 
@@ -119,6 +120,10 @@ nav {
 footer {
   padding: 2em; }
 
+.work a {
+  text-decoration: none; }
+.work figcaption {
+  font-size: .75em; }
 .work img {
   border: 1px solid #cccccc;
   max-width: 100%;
@@ -177,6 +182,14 @@ footer {
       width: 30%; }
     .container p {
       line-height: 120%; }
+
+  .container.work div {
+    display: flex; }
+    .container.work div figcaption {
+      display: none; }
+    .container.work div a:first-child {
+      flex-grow: 2;
+      margin-right: 1.25em; }
 
   footer {
     max-width: 76rem;
