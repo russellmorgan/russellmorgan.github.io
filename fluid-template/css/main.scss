@@ -28,7 +28,7 @@ h3 {
 
 h1 {
     font-size: 2.3em;
-    line-height: 110%;
+    line-height: 100%;
 }
 
 h2 {
@@ -47,6 +47,9 @@ p {
 }
 ul {
     padding-left:1.25em;
+    li {
+        padding-bottom: .31em;
+    }
 }
 body {
     @extend .ns;
@@ -174,6 +177,13 @@ footer {
     }
 }
 
+//Resume section styles
+.resume {
+    strong+p {
+        margin-top:1em;
+    }
+}
+
 
 //Desktop styles
 @media (min-width: 64em) {
@@ -220,7 +230,7 @@ footer {
         //You can switch this to "center" if you'd like the aside to be vertically centered with the content
         align-items: flex-start;
         main {
-            width: 54em;
+            width: 64em;
         }
         aside {
             width: 19.5em;
@@ -233,6 +243,10 @@ footer {
         .skills-list ul li {
             width:30%;
         }
+        p {
+            line-height: 120%;
+        }
+
     }
     footer {
         max-width: 76rem;

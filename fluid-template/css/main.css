@@ -15,7 +15,7 @@ h3 {
 
 h1 {
   font-size: 2.3em;
-  line-height: 110%; }
+  line-height: 100%; }
 
 h2 {
   font-size: 1.75em;
@@ -31,6 +31,8 @@ p {
 
 ul {
   padding-left: 1.25em; }
+  ul li {
+    padding-bottom: .31em; }
 
 body {
   font: normal 100% system, -apple-system, ".SFNSDisplay-Regular", "Roboto", "Helvetica Neue", "Lucida Grande";
@@ -124,6 +126,9 @@ footer {
   margin-bottom: 0.62em;
   margin-top: 0.62em; }
 
+.resume strong + p {
+  margin-top: 1em; }
+
 @media (min-width: 64em) {
   .mobile {
     display: none; }
@@ -161,7 +166,7 @@ footer {
     flex-direction: row;
     align-items: flex-start; }
     .container main {
-      width: 54em; }
+      width: 64em; }
     .container aside {
       width: 19.5em;
       padding: 0em 0em 0em 2.5em;
@@ -170,6 +175,8 @@ footer {
       width: 80%; }
     .container .skills-list ul li {
       width: 30%; }
+    .container p {
+      line-height: 120%; }
 
   footer {
     max-width: 76rem;
