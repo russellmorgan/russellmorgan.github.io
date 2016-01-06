@@ -1,0 +1,26 @@
+{% include header.html %}
+
+<div class="container blog">
+    <main>
+        <section>
+        {% for post in site.posts limit:1 %}
+          <h1>{{ post.title }}</h1>
+         <span> {{ post.date | date_to_string }} </span> 
+        </section>
+            {{ post.content }}
+        {% endfor %}
+        
+    </main>
+    
+    <aside>
+        <h3>Older posts</h3>
+        <ul>
+        {% for post in site.posts %}
+          <li><a href="{{post.url}}">{{ post.title }}</a><br><small> {{ post.date | date_to_string }} </small></li>
+        {% endfor %}
+        </ul>
+    </aside>
+    
+</div>
+
+{% include footer.html %}
