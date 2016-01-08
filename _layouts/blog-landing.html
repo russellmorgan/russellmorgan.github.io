@@ -1,10 +1,12 @@
 {% include header.html %}
 
 {% for post in site.posts limit:1 %}
-<div class="container intro">
+<div class="intro">
+    <div class="container">
     <section>
         <h1>{{ post.title }}</h1>
     </section>
+    </div>
 </div>
 
 
