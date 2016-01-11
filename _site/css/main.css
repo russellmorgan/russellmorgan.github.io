@@ -118,6 +118,10 @@ nav {
         float: left;
         width: 40%;
         padding-right: 1.25em; }
+  .container blockquote {
+    font-size: 0.87rem;
+    border: 1px solid #ccc;
+    padding: 0.62rem; }
 
 footer {
   padding: 2em;
