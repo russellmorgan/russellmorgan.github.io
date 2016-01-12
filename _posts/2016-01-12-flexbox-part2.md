@@ -10,14 +10,11 @@ Last week we dipped a toe into the surprisingly warm waters of Flexbox and found
 
 Here's how we last left our very basic nav:
 
-```
 <style>
 .my-flex-navigation {display:flex; list-style:none; background:#ccc } 
 .my flex-navigation li { background: #333; margin:1rem }
 </style>
-
 <ul class="my-flex-navigation"> <li>List item 1</li> <li>List item 2</li> <li>List item 3</li> </ul>
-```
 
 The justify-content attribute has five different options, starting with the default value you've already seen they are as follows:
 
@@ -31,19 +28,19 @@ Here's what our old nav looks like with the above values (I've added a backgroun
 
 <style>
 .my-flex-navigation {display:flex; list-style:none; background:#ccc } 
-.my flex-navigation li { background: #333; margin:1rem }
+.my-flex-navigation li { background: #999; margin:1rem }
 </style>
 
-** JUSTIFY-CONTENT:FLEX-END **
+**JUSTIFY-CONTENT:FLEX-END**
 <ul class="my-flex-navigation" style="justify-content:flex-end"> <li>List item 1</li> <li>List item 2</li> <li>List item 3</li> </ul>
 
-** JUSTIFY-CONTENT:CENTER **
+**JUSTIFY-CONTENT:CENTER**
 <ul class="my-flex-navigation" style="justify-content:center"> <li>List item 1</li> <li>List item 2</li> <li>List item 3</li> </ul>
 
-** JUSTIFY-CONTENT:SPACE-BETWEEN **
+**JUSTIFY-CONTENT:SPACE-BETWEEN**
 <ul class="my-flex-navigation" style="justify-content:space-between"> <li>List item 1</li> <li>List item 2</li> <li>List item 3</li> </ul>
 
-** JUSTIFY-CONTENT:SPACE-AROUND **
+**JUSTIFY-CONTENT:SPACE-AROUND**
 <ul class="my-flex-navigation" style="justify-content:space-around"> <li>List item 1</li> <li>List item 2</li> <li>List item 3</li> </ul>
 
 Now we're starting to see a little of what flexbx can do but I imagine you're thinking something like "that's all well and good but I can already do that with some margins and floats". Well, stay tuned for the next post when I show you a nice trick flexbox has built-in to deal with a layout issue every developer has faced with a sigh.
