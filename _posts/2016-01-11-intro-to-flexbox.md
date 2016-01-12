@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Learn CSS Flexbox, Part 1
+title: Learning CSS Flexbox, our first flex box [Part 1]
 category: CSS
 tags: css, flex, flex box
 author: Russell Morgan
