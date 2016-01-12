@@ -10,11 +10,18 @@ Last week we dipped a toe into the surprisingly warm waters of Flexbox and found
 
 Here's how we last left our very basic nav:
 
+{% highlight html %}
 <style>
-.my-flex-navigation {display:flex; list-style:none; background:#ccc } 
-.my flex-navigation li { background: #333; margin:1rem }
+  .my-flex-navigation {display:flex; list-style:none; background:#ccc } 
+  .my flex-navigation li { background: #333; margin:1rem }
 </style>
-<ul class="my-flex-navigation"> <li>List item 1</li> <li>List item 2</li> <li>List item 3</li> </ul>
+
+<ul class="my-flex-navigation"> 
+  <li>List item 1</li> 
+  <li>List item 2</li> 
+  <li>List item 3</li> 
+</ul>
+{% endhighlight %}
 
 The justify-content attribute has five different options, starting with the default value you've already seen they are as follows:
 

@@ -30,22 +30,33 @@
     </nav>
 
 
+
+<div class="intro">
+    <div class="container">
+    <section>
+        <h1>Learning CSS Flexbox, on justifying content [Part 2]</h1>
+    </section>
+    </div>
+</div>
+
 <div class="container blog">
     <main>
-        <section>
-            <h1>Learning CSS Flexbox, on justifying content [Part 2]</h1> 
-            <span>12 Jan 2016</span>
-        </section>
-        <p>Last week we dipped a toe into the surprisingly warm waters of Flexbox and found out how easy it was to make a standard nav. In today’s (short) lesson we’re going to look at how to justify the content inside your flex container using the aptly named <code class="highlighter-rouge">justify-content</code> flex attribute.</p>
+        <article>
+            <h5>12 Jan 2016</h5>
+            <p>Last week we dipped a toe into the surprisingly warm waters of Flexbox and found out how easy it was to make a standard nav. In today’s (short) lesson we’re going to look at how to justify the content inside your flex container using the aptly named <code class="highlighter-rouge">justify-content</code> flex attribute.</p>
 
 <p>Here’s how we last left our very basic nav:</p>
 
-<style>
-.my-flex-navigation {display:flex; list-style:none; background:#ccc } 
-.my flex-navigation li { background: #333; margin:1rem }
-</style>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;style&gt;</span>
+  <span class="nc">.my-flex-navigation</span> <span class="p">{</span><span class="nl">display</span><span class="p">:</span><span class="n">flex</span><span class="p">;</span> <span class="nl">list-style</span><span class="p">:</span><span class="nb">none</span><span class="p">;</span> <span class="nl">background</span><span class="p">:</span><span class="m">#ccc</span> <span class="p">}</span> 
+  <span class="nc">.my</span> <span class="nt">flex-navigation</span> <span class="nt">li</span> <span class="p">{</span> <span class="nl">background</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span> <span class="nl">margin</span><span class="p">:</span><span class="m">1rem</span> <span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span>
 
-<ul class="my-flex-navigation"> <li>List item 1</li> <li>List item 2</li> <li>List item 3</li> </ul>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"my-flex-navigation"</span><span class="nt">&gt;</span> 
+  <span class="nt">&lt;li&gt;</span>List item 1<span class="nt">&lt;/li&gt;</span> 
+  <span class="nt">&lt;li&gt;</span>List item 2<span class="nt">&lt;/li&gt;</span> 
+  <span class="nt">&lt;li&gt;</span>List item 3<span class="nt">&lt;/li&gt;</span> 
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
 <p>The justify-content attribute has five different options, starting with the default value you’ve already seen they are as follows:</p>
 
@@ -78,6 +89,7 @@
 
 <p>Now we’re starting to see a little of what flexbx can do but I imagine you’re thinking something like “that’s all well and good but I can already do that with some margins and floats”. Well, stay tuned for the next post when I show you a nice trick flexbox has built-in to deal with a layout issue every developer has faced with a sigh.</p>
 
+        </article>        
     </main>
     
     <aside>
