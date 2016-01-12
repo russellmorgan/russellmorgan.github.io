@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Meet CSS Flexbox, your new best friend when it comes to layout.
+title: Learn CSS Flexbox, Part 1.
 category: CSS
 tags: css, flex, flex box
 author: Russell Morgan
@@ -60,3 +60,8 @@ Woah, now the last <li> is first. Those of you sitting in the first row will hav
 To sum up this intro you can think of the flex container as as block level element that can lay out it's children as either rows or columns by source order. With one attribute change we can reverse the source order or the layout direction. And while my example used an unordered list there's no reason you can't use a different element, such `<nav>` or even a plain `<div>` and assign it the CSS of `display:flex`. 
 
 Here's a [JSFiddle](https://jsfiddle.net/rustbucket/8o1vu228/1/) to let you start playing around with the example code and get comfortable. I hope by this point you'll be tempted to add basic flexbox elements to your layouts without worrying about all hell breaking loose. Next up we'll go through how to add tweak the layout of the flex box items with just a few CSS attributes, it gets a lot a lot more exciting from here...
+
+In case you can't wait or don't feel like being drip fed this info as I get to writing each part here's a couple of good resources:
+
+*[CSS Tricks "complete guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+*[Learn by watching videos:](http://flexbox.io/#/)
