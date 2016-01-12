@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Learn CSS Flexbox, Part 1.
+title: Learn CSS Flexbox, Part 1
 category: CSS
 tags: css, flex, flex box
 author: Russell Morgan
 ---
 
-I'll be honest up front: By the time I'm done writing this series of posts about CSS flex box I want you to be the sort of convert that looks back at using floats for layout tasks and shakes their head in dismay, not unlike the way we once did about table based layouts. I think that once you get the hang of them your responsive, fluid skills will take on a new ninja like quality. But don't my word for it, almost everyone's favorite front end frame Bootstrap will be going flexbox in version 4. [Here's more info from their alpha docs.](http://v4-alpha.getbootstrap.com/getting-started/flexbox/)
+Welcome to learning aout CSS Flexbox, better known as your new layout bff. By the time I'm done writing this series of posts about CSS flex box I want you to be the sort of convert that looks back at using floats for layout tasks and shakes their head in dismay, not unlike the way we once did about table based layouts. I think that once you get the hang of them your responsive, fluid skills will take on a new ninja like quality. But don't my word for it, almost everyone's favorite front end frame Bootstrap will be going flexbox in version 4. [Here's more info from their alpha docs.](http://v4-alpha.getbootstrap.com/getting-started/flexbox/)
 
 So let's get started with what the CSS flexible box is shall we? Here's what the [W3C](https://www.w3.org/TR/css-flexbox-1/) has to say about the technology:
 
@@ -63,5 +63,5 @@ Here's a [JSFiddle](https://jsfiddle.net/rustbucket/8o1vu228/1/) to let you star
 
 In case you can't wait or don't feel like being drip fed this info as I get to writing each part here's a couple of good resources:
 
-*[CSS Tricks "complete guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-*[Learn by watching videos:](http://flexbox.io/#/)
+* [CSS Tricks "complete guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Learn by watching videos:](http://flexbox.io/#/)
