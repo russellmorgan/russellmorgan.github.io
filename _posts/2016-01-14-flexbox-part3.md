@@ -24,8 +24,10 @@ To illustrate this example I'm going to take a detour from our previous nav code
 
 <div class="my-flex-container">
     <div>Door number one.</div>
-    <div>Lorem ipsum dolor sit amet, 
-    consectetur adipiscing elit....etc.</div>
+    <div>
+    Lorem ipsum dolor sit amet, 
+    consectetur adipiscing....etc.
+    </div>
     <div>Door number three.</div>
 </div>
 {% endhighlight %}
