@@ -6,14 +6,17 @@ tags: css, flex, flex box
 author: Russell Morgan
 ---
 
-Last week we dipped a toe into the surprisingly warm waters of Flexbox and found out how easy it was to make a standard nav. In today's (short) lesson we're going to look at how to justify the content inside your flex container using the aptly named `justify-content` flex attribute.
+Last week we dipped a toe into the surprisingly warm waters of Flexbox and found out how easy it was to make a standard nav. In today's lesson we're going to look at how to justify the content inside your flex container using the aptly named `justify-content` flex attribute.
 
 Here's how we last left our very basic nav:
 
 {% highlight html %}
 <style>
-  .my-flex-navigation {display:flex; list-style:none; background:#ccc } 
-  .my flex-navigation li { background: #333; margin:1rem }
+  .my-flex-navigation {
+    display:flex; 
+    list-style:none;
+    background:#ccc 
+  } 
 </style>
 
 <ul class="my-flex-navigation"> 
@@ -23,6 +26,14 @@ Here's how we last left our very basic nav:
 </ul>
 {% endhighlight %}
 
+Which gave us this as a result:
+
+<style>
+.my-flex-navigation {display:flex; list-style:none; background:#ccc; padding:0 } 
+</style>
+
+<ul class="my-flex-navigation"> <li>List item 1</li> <li>List item 2</li> <li>List item 3</li> </ul>
+
 The justify-content attribute has five different options, starting with the default value you've already seen they are as follows:
 
 * flex-start: justify the items at the beginning of the flex container
@@ -31,11 +42,11 @@ The justify-content attribute has five different options, starting with the defa
 * space-between: This is where it gets kind of weird, this option puts an equal amount of space between each item so that the content fits the entire flexbox
 * space-around: If you took space-between and center and they had a baby that's what this is. it centers all the items and then puts an equal amount of space between them.
 
-Here's what our old nav looks like with the above values (I've added a background and a bit of margin to better illustrate how the items align with each setting)
+Here's what our nav looks like with the above values. For this art I've added a 2px border around each item to better illustrate what's happening.
 
 <style>
-.my-flex-navigation {display:flex; list-style:none; background:#ccc } 
-.my-flex-navigation li { background: #999; margin:1rem }
+.my-flex-navigation {display:flex; list-style:none; background:#ccc; } 
+.my-flex-navigation li { border:2px solid #000; }
 </style>
 
 **JUSTIFY-CONTENT:FLEX-END**

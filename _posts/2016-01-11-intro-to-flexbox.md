@@ -21,11 +21,20 @@ The easiest way to wrap your head around flex boxes is to remember they have two
 
 With this first lesson we just want to get our feet wet so we're going to discuss the flex container and ignore flex items for now. Let's start with creating a standard horizontal navigation menu. Most developers who give a fig about semantic layouts would probably code an unordered list like this:
 
-```<ul class="my-navigation"> <li>List item 1</li> <li>List item 2</li> <li>List item 3</li> </ul>```
+{% highlight html %}
+<ul class="my-navigation"> 
+    <li>List item 1</li> 
+    <li>List item 2</li>
+    <li>List item 3</li>
+</ul>
+{% endhighlight %}
 
 Then add the basic following styling:
 
-```<style> .my-navigation {list-style:none; overflow:hidden } .my-navigation li { float: left } </style>```
+{% highlight css %}
+.my-navigation {list-style:none; overflow:hidden } 
+.my-navigation li { float: left }
+{% endhighlight %}
 
 Which would give us something like this:
 
@@ -39,7 +48,7 @@ Easy enough but we have to add "overflow:hidden" property to all the list items 
 
 Now let's tackle the same task using just a sprinkle of flex box. We keep the same HTML as above but change the CSS to look like this:
 
-```<style> .my-flex-navigation {display:flex; list-style:none } </style>```
+{% highlight css %} .my-flex-navigation {display:flex; list-style:none } {% endhighlight %}
 
 <style>
 .my-flex-navigation {display:flex; list-style:none; background:#ccc } 
