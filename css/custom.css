@@ -2,7 +2,7 @@
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 350px;
+  grid-auto-rows: minmax(350px, 1fr);
   grid-auto-flow: dense;
 }
 
@@ -12,6 +12,6 @@
 }
 
 .card-body {
-  padding: 1.25rem 1.25rem 0.5rem 1.25rem;
+  padding: 1.25rem 1.25rem 0.25rem 1.25rem;
   flex: 0 1 auto;
 }
