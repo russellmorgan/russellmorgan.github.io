@@ -62,9 +62,15 @@ h4 {
   flex: 0 0 auto;
   border-radius: 0;
   justify-content: space-between;
-  background-color: #282c34;
-  border: 1px solid #5b6169;
-  margin: 15px 28px 15px 0px; /* I'd use grid-gap but IE11 needs the spacing on the children */
+  background-color: rgba(100,100,100,0.1);
+  /* border: 1px solid #5b6169; */
+  transition: all 0.2s linear;
+  margin: 15px 28px 15px 0px;  /* I'd use grid-gap but IE11 needs the spacing on the children */
+  padding: .8rem;
+}
+
+.card:hover {
+  background-color: rgba(100,100,100,0.4);
 }
 
 .card-body {
