@@ -1,0 +1,9 @@
+{
+  "name": "russellmorgan.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio site",
+  "main": "index.js",
+  "repository": "https://russellmorgan.github.io.git",
+  "author": "Russell Morgan <russell.morgan@gmail.com>",
+  "license": "MIT"
+}
