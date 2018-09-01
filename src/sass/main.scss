@@ -7,7 +7,7 @@ $highlight: rgb(179,235,242);
 $bg-highlight: #fff;
 
 $light:#FBFAFA;
-$light-accent:#4C87B7;
+$light-accent:rgba(76,135,183,1);
 $main-color:#24B4E2;
 $dark-accent:#95675C;
 $dark-shade:#1E2954;
@@ -51,16 +51,52 @@ section {
   background: $background;
   z-index: 10;
   color: $dark-shade;
+  display: flex;
+  
 }
 
-section:not(:first-child) {
-  // position: absolute;
-  // top:0;
-  // left:0;
-  // width: 100%;
-  // z-index: 20;
-  // transform: translateY(100vh);
+.intro {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    line-height: 1.5;
+  }
+  &__background {
+    cursor: pointer;
+    display: flex;
+    background: $light-accent;
+    border: 1px solid $main-color;
+    color:$light;
+    height: 40%;
+    width: 70%;
+  }
+  &__text {
+    margin: auto 40px auto 80px;
+    font-size: 1.1rem;
+  }
 }
+
+
+.content {
+  &__nav {
+    background: $light-accent;
+    color: $light;
+    padding: $base-padding;
+    font-family: 'Oxygen', sans-serif;
+    display: flex;
+    flex-direction: column;
+    span {
+      cursor: pointer;
+      &:hover {
+        opacity:0.8;
+      }
+    }
+  }
+}
+
+
+
 
 .section__content {
   padding: $base-padding*2;
@@ -69,35 +105,12 @@ section:not(:first-child) {
 
 .section__column {
   line-height: 1.5;
-  h1 {
+  h2 {
     background: $dark-accent;
     color:$light;
     display: inline-block;
     padding: $base-padding;
     line-height: 1.1;
-  }
-}
-
-.intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  h1 {
-    line-height: 1.5;
-  }
-  &__background {
-    display: flex;
-    background: $light-accent;
-    border: 10px solid $main-color;
-    color:$light;
-    border-radius: 50%;
-    height: 40%;
-    width: 70%;
-  }
-  &__text {
-    margin: auto 40px auto 80px;
-    font-size: 1.1rem;
   }
 }
 
@@ -113,25 +126,7 @@ section:not(:first-child) {
   }
 }
 
-.identifier {
-  background: $light-accent;
-  color: $light;
-  padding: $base-padding $base-padding $base-padding $base-padding*2;
-  font-family: 'Oxygen', sans-serif;
-  display: flex;
-  border-bottom: 5px solid $main-color;
-  strong {
-    color:$dark-shade;
-    margin-right: $base-padding;
-  }
-  span {
-    cursor: pointer;
-    margin-right: $base-padding;
-    &:hover {
-      opacity:0.8;
-    }
-  }
-}
+
 
 // Non-mobile styling
 @media (min-width: 768px) {
