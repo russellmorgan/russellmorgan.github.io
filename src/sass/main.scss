@@ -18,12 +18,12 @@ body {
   margin:0;
   font-size: 16px;
   color: $text;
-  background: $light;
+  background: $background;
   font-family: 'Oxygen', sans-serif;
 }
 
 a, a:visited {
-  color: $dark-accent;
+  color: $main-color;
 }
 
 a:hover {
@@ -45,10 +45,12 @@ h2 {
   font-family: $secondary-text;
 }
 
+strong {
+  font-family: $secondary-text;
+}
+
 section {
-  height: 100vh;
   position: relative;  
-  background: $background;
   z-index: 10;
   color: $dark-shade;
   display: flex;
@@ -59,6 +61,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   h1 {
     line-height: 1.5;
   }
@@ -67,7 +70,7 @@ section {
     display: flex;
     background: $light-accent;
     border: 1px solid $main-color;
-    color:$light;
+    color: #fff;
     height: 40%;
     width: 70%;
   }
@@ -79,13 +82,14 @@ section {
 
 
 .content {
+  height: 100vh;
+  overflow: auto;
   &__nav {
     background: $light-accent;
     color: $light;
     padding: $base-padding;
     font-family: 'Oxygen', sans-serif;
     display: flex;
-    flex-direction: column;
     span {
       cursor: pointer;
       &:hover {
@@ -95,18 +99,17 @@ section {
   }
 }
 
-
-
-
-.section__content {
+.content__section {
   padding: $base-padding*2;
-  display: flex;
+  max-width: 1024px; //1140px is bootstrap
+  margin: auto;
 }
 
-.section__column {
-  line-height: 1.5;
+.content__item {
+  line-height: 1.4;
+  margin-bottom: $base-padding*6;
   h2 {
-    background: $dark-accent;
+    background: $light-accent;
     color:$light;
     display: inline-block;
     padding: $base-padding;
@@ -114,10 +117,36 @@ section {
   }
 }
 
-.projects__thumbnail {
-  background: #fff;
-  padding: $base-padding*2;
+.content__about {
+  margin-top: $base-padding*2;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: $base-padding*6;
 }
+
+.content__grid {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat( auto-fit, minmax(100px, 120px) );
+  div {
+    background: #fff;
+    text-align: center;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $base-padding;
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &--projects {
+    grid-template-columns: repeat( auto-fit, minmax(200px, 300px) );
+  }
+}
+
 
 .contact {
   &__logos img {
@@ -138,8 +167,6 @@ section {
     width: 500px;  
   }
   .section__content {
-    max-width: 1200px;
-    justify-content: space-between;
     aside {
       width: 30%;
       img {
