@@ -1,0 +1,237 @@
+$base-padding: 10px;
+$background: #e9e9e9;
+$text: #333;
+$text-dark: rgb(50,50,46);
+$text-light: rgb(170,169,163);
+$highlight: rgb(179,235,242);
+$bg-highlight: #fff;
+
+$light:#FBFAFA;
+$light-accent:rgba(76,135,183,1);
+$main-color:#24B4E2;
+$dark-accent:#95675C;
+$dark-shade:#1E2954;
+
+$secondary-text: 'Questrial', sans-serif;
+$monospace-text: 'Inconsolata', monospace;
+
+body {
+  margin:0;
+  font-size: 16px;
+  color: $text;
+  background: $background;
+  font-family: 'Karla', monospace, sans-serif;
+}
+
+a, a:visited {
+  color: $main-color;
+}
+
+a:hover {
+  opacity:0.8;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  font-family: $secondary-text;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
+  font-family: $secondary-text;
+}
+
+strong {
+  font-family: $secondary-text;
+  color: $text-dark;
+}
+
+section {
+  position: relative;  
+  z-index: 10;
+  color: $dark-shade;
+  display: flex;
+  
+}
+
+.intro {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  &__background {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $light-accent;
+    border: 1px solid $main-color;
+    color: #fff;
+    height: 50%;
+    width: 90%;
+  }
+  &__text {
+    font-size: 1.1rem;
+    width: 80%;
+  }
+}
+
+
+.content {
+  height: 100vh;
+  overflow: auto;
+  &__nav {
+    background: $light-accent;
+    color: $light;
+    padding: $base-padding;
+    font-family: 'Oxygen', sans-serif;
+    display: flex;
+    span {
+      cursor: pointer;
+      &:hover {
+        opacity:0.8;
+      }
+    }
+  }
+}
+
+.content__section {
+  padding: $base-padding*2;
+  margin: auto;
+}
+
+.content__item {
+  line-height: 1.3;
+  margin-bottom: $base-padding*6;
+  h2 {
+    background: $light-accent;
+    color:$light;
+    display: inline-block;
+    padding: $base-padding;
+    line-height: 1.1;
+  }
+}
+
+.content__about {
+  margin-top: $base-padding*2;
+  margin-bottom: $base-padding*2;
+}
+
+.content__grid {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat( auto-fit, minmax(100px, 120px) );
+  div {
+    background: #fff;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $base-padding;
+    position: relative;
+  }
+  &--projects {
+    grid-template-columns: repeat( auto-fit, minmax(300px, 320px) );
+    grid-gap: $base-padding;
+    div {
+      cursor: pointer;
+      align-items: flex-start;
+    }
+    .project {
+      transform: translate3d(0,0,0);
+      transform-style: preserve-3d;
+      perspective: 800px;
+      height: 300px;
+      a, a:visited {
+        color:#fff;
+        text-decoration: none;
+      }
+      &:hover {
+        animation: flip-horizontal-bottom 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) forwards;
+      } 
+      .front, .back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+          max-height: 260px;
+          margin-bottom: $base-padding;
+          margin-top: $base-padding;
+        }
+      }
+      .back {
+        transform: rotateX(180deg);
+        background: $main-color;
+        color: #fff;
+        padding: $base-padding*2;
+      }
+    }
+  }
+}
+
+.content__contacts { 
+  display: flex;
+  margin-top: $base-padding*2;
+  img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: $base-padding;
+  }
+}
+
+
+// Non-mobile styling
+@media (min-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+
+  .content__about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $base-padding*6;
+    div:first-child {
+      text-align: justify;
+    }
+  }
+
+  .content__section {
+    padding: $base-padding*2;
+    max-width: 1000px; //1140px is bootstrap
+    margin: auto;
+  }
+
+  .intro__background {
+    height: 400px;
+    width: 400px;  
+    h1 {
+      line-height: 1.5;
+    }
+  }
+}
+
+// Animations 
+
+@keyframes flip-horizontal-bottom {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
