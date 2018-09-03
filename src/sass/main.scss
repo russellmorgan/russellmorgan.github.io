@@ -64,21 +64,20 @@ section {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  h1 {
-    line-height: 1.5;
-  }
   &__background {
     cursor: pointer;
     display: flex;
+    justify-content: center;
+    align-items: center;
     background: $light-accent;
     border: 1px solid $main-color;
     color: #fff;
-    height: 40%;
-    width: 70%;
+    height: 50%;
+    width: 90%;
   }
   &__text {
-    margin: auto 40px auto 80px;
     font-size: 1.1rem;
+    width: 80%;
   }
 }
 
@@ -121,12 +120,6 @@ section {
 .content__about {
   margin-top: $base-padding*2;
   margin-bottom: $base-padding*2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: $base-padding*6;
-  div:first-child {
-    text-align: justify;
-  }
 }
 
 .content__grid {
@@ -205,29 +198,28 @@ section {
   body {
     overflow: hidden;
   }
+
+  .content__about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $base-padding*6;
+    div:first-child {
+      text-align: justify;
+    }
+  }
+
   .content__section {
     padding: $base-padding*2;
     max-width: 1000px; //1140px is bootstrap
     margin: auto;
   }
 
-
   .intro__background {
-    height: 500px;
-    width: 500px;  
-  }
-  .section__content {
-    aside {
-      width: 30%;
-      img {
-        display: inline-block;
-        width: 100%;
-        height: auto;
-      }
+    height: 400px;
+    width: 400px;  
+    h1 {
+      line-height: 1.5;
     }
-  }
-  .section__column {
-    width: 50%;
   }
 }
 
