@@ -46,6 +46,12 @@ h2 {
   font-family: $secondary-text;
 }
 
+h3 {
+  font-weight: normal;
+  margin-top: 0;
+  padding-top: 0;
+}
+
 strong {
   font-family: $secondary-text;
   color: $text-dark;
@@ -85,6 +91,7 @@ section {
 .content {
   height: 100vh;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   &__nav {
     background: $light-accent;
     color: $light;
