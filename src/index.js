@@ -94,12 +94,3 @@ let showMainContent = () => {
 // Navigation binding
 const showMore = document.querySelector('.intro__background');
 showMore.addEventListener('click', hideIntro, false); 
-
-// const showDetailsLinks = document.querySelectorAll('.identifier__details');
-// const showProjectsLinks = document.querySelectorAll('.identifier__projects');
-// const showContactLinks = document.querySelectorAll('.identifier__contact');
-
-// showDetailsLinks.forEach( (el) => { el.addEventListener('click', () => { swapSlides('.details') }, false); }) 
-// showProjectsLinks.forEach( (el) => { el.addEventListener('click', () => { swapSlides('.projects') } , false); }) 
-// showContactLinks.forEach( (el) => { el.addEventListener('click', () => { swapSlides('.contact') }, false); }) 
-
