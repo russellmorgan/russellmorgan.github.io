@@ -160,7 +160,7 @@ section {
         text-decoration: none;
       }
       &:hover {
-        animation: flip-horizontal-bottom 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) forwards;
+        animation: flip-horizontal-bottom 1s linear forwards;
       } 
       .front, .back {
         backface-visibility: hidden;

@@ -1,3 +1,4 @@
+import './sass/main.scss';
 import anime from 'animejs'
 
 let currentSlide;
