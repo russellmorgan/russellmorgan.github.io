@@ -1,7 +1,8 @@
-import './sass/main.scss';
+import './scss/main.scss';
 import anime from 'animejs'
 
 let currentSlide;
+console.log('what');
 
 // Opening animation
 
