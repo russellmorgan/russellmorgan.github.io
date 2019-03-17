@@ -1,9 +1,7 @@
 import './scss/main.scss';
-import anime from 'animejs'
+import anime from 'animejs';
 
-let currentSlide;
-console.log('what');
-
+// let currentSlide;
 // Opening animation
 
 let showIntro = anime.timeline();

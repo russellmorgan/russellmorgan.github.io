@@ -148,7 +148,6 @@ section {
     grid-template-columns: repeat( auto-fit, minmax(300px, 320px) );
     grid-gap: $base-padding;
     div {
-      cursor: pointer;
       align-items: flex-start;
     }
     .project {
@@ -172,14 +171,21 @@ section {
         right: 0;
         overflow: hidden;
         z-index: 1;
+        display: flex;
         img {
           display: block;
+          max-height: 260px;
           width: 100%;
           height: auto;
-          max-height: 260px;
           margin-bottom: $base-padding;
           margin-top: $base-padding;
         }
+        img.project__image {
+          width: auto;
+        }
+      }
+      .front {
+        align-items: center;
       }
       .back {
         background: $main-color;
@@ -189,6 +195,9 @@ section {
         top: 320px;
         opacity: 0;
         transition: opacity 0.2s ease-in-out;
+        a:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
