@@ -140,7 +140,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
     padding: $base-padding;
     position: relative;
   }
@@ -150,54 +149,76 @@ section {
     div {
       align-items: flex-start;
     }
-    .project {
-      height: 300px;
-      overflow: hidden;
-      a, a:visited {
-        color:#fff;
-        text-decoration: none;
-      }
-      &:hover {
-        .back {
-          top:0;
-          opacity: 1;
-        }
-      } 
-      .front, .back {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        overflow: hidden;
-        z-index: 1;
-        display: flex;
-        img {
-          display: block;
-          max-height: 260px;
-          width: 100%;
-          height: auto;
-          margin-bottom: $base-padding;
-          margin-top: $base-padding;
-        }
-        img.project__image {
-          width: auto;
-        }
-      }
-      .front {
-        align-items: center;
-      }
+  }
+  &--featured {
+    grid-template-columns: minmax(300px, 320px) minmax(600px, 650px);
+    grid-gap: $base-padding;
+    margin-bottom: $base-padding;
+  }
+  .project {
+    height: 300px;
+    overflow: hidden;
+    a, a:visited {
+      color:#fff;
+      text-decoration: none;
+    }
+    &:hover {
       .back {
-        background: $main-color;
-        color: #fff;
-        padding: $base-padding*2;
-        z-index: 2;
-        top: 320px;
-        opacity: 0;
-        transition: opacity 0.2s ease-in-out;
-        a:hover {
-          text-decoration: underline;
-        }
+        top:0;
+        opacity: 1;
+      }
+    } 
+    .front, .back {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      z-index: 1;
+      display: flex;
+      img {
+        display: block;
+        max-height: 260px;
+        width: 100%;
+        height: auto;
+        margin-bottom: $base-padding;
+        margin-top: $base-padding;
+      }
+      img.project__image {
+        width: auto;
+      }
+    }
+    .front {
+      align-items: center;
+    }
+    .back {
+      background: $main-color;
+      color: #fff;
+      padding: $base-padding*2;
+      z-index: 2;
+      top: 320px;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+    &--vertical {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-end: span 2;
+      min-height:630px;
+      .front img {
+        max-height: 540px;
+        border:1px solid $text-light;
+        padding:$base-padding;
+      }
+    }
+    &--wide {
+      grid-column-start:2;
+      .front img {
+        width: auto;
       }
     }
   }
