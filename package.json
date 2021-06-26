@@ -1,7 +1,7 @@
 {
   "name": "russellmorgan.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "My github pages site",
   "main": "index.js",
   "scripts": {
     "start":"npx @11ty/eleventy --serve",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/russellmorgan/russellmorgan.github.io.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Russell Morgan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/russellmorgan/russellmorgan.github.io/issues"
