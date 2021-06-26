@@ -1,12 +1,11 @@
 {
   "name": "russellmorgan.github.io",
-  "version": "1.2.0",
-  "description": "My portfolio website hosted here on github.",
-  "main": "index.html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel --no-cache src/index.html -d ./public",
-    "build": "parcel build ./src/index.html -d ./dist"
+    "start":"npx @11ty/eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -19,11 +18,7 @@
     "url": "https://github.com/russellmorgan/russellmorgan.github.io/issues"
   },
   "homepage": "https://github.com/russellmorgan/russellmorgan.github.io#readme",
-  "dependencies": {
-    "animejs": "^2.2.0",
-    "node-sass": "^4.11.0"
-  },
   "devDependencies": {
-    "parcel-bundler": "^1.10.3"
+    "@11ty/eleventy": "^0.12.1"
   }
 }
