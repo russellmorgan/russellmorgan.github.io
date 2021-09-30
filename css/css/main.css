@@ -1,0 +1,32 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2 {
+  font-weight: 500;
+}
+
+.post p {
+  margin: 1.25rem auto 1.25rem auto;
+}
+
+.footer img {
+  width: 20px;
+  height: auto;
+}
+
+header li {
+  border-left: 1px solid #9CA3AF;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+}
+
+header li:last-child {
+  border-right: 1px solid #9CA3AF;
+  padding-right: 1.25rem;
+}
+/*# sourceMappingURL=main.css.map */
