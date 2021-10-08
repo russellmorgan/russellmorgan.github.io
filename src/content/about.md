@@ -14,15 +14,17 @@ I've worked at digital agencies, startups and other companies. I've also worked 
 
 When I'm not being a front end developer I love 3D technology, photography, working with game engines and experimenting with VR and AR.
 
----
+<hr class="my-5">
 
-### Some of the places you can find more of my work:
- - [Artstation](https://www.artstation.com/rustbucket)
- - Behance
- - Sketchfab
- - Instagram
+<div class="flex flex-col space-y-1">
+<h3>Some of the places you can find more of my work</h3>
+<a href="https://www.artstation.com/rustbucket" target="_blank" class="underline">Artstation Portfolio</a>
+<a href="https://www.behance.net/subreference" class="underline" target="_blank">Behance</a>
+<a href="https://sketchfab.com/rustbucket" class="underline" target="_blank">Sketchfab</a>
+<a href="https://www.instagram.com/helsinkizombiecollective/" class="underline" target="_blank">Instagram</a>
+</div>
 
----
+<hr class="my-5">
 
 **Front End**\
 HTML, CSS, SASS, JavaScript
