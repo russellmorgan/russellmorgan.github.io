@@ -8,12 +8,18 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3,
+strong {
   font-weight: 500;
 }
 
 .post p {
   margin: 1.25rem auto 1.25rem auto;
+}
+
+.post a {
+  text-decoration: underline;
 }
 
 .footer img {
