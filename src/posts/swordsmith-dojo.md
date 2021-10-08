@@ -1,7 +1,9 @@
 ---
 layout: post.html
 title: Swordsmith's Dojo
-intro: A scene I built using Unreal 4.27 with some existing low poly assets. Basically a kit bash project that spawned my first timelapse attempts and a music video.
+intro: A scene I built using Unreal 4.27 with some existing low poly assets. Basically a kit bash project that also spawned a music video. This is the first time I've tried to keep a record of my creative process and the first time I've written about a finished project. Lots of lessons learned along the way, looking forward to doing more of these post mortems.
+thumbnail: thumbnail-sword.jpg
+wtf: hello
 tags: 
 - post
 - unreal engine
@@ -45,7 +47,7 @@ Now that it was starting to look like something I asked for some feedback from f
 The final bits of the job were adding some grime to the buildings by using decals and adjusting the lights a million times. After a few test renders I decided I didn't like the cel shaded look all that much (it conflicted with the hologram tree) and removed it. Then I remembered the LUT and removed that too. Instead I dialed in the color/lighting so that it was mostly a cool city blue and the dojo could be a warmer yellow and red. More contrast made the difference here.
 
 ![final render](/img/posts/swordsmith/final.jpg)
-<small>One of the final renders</small>
+<small>One of the final renders, cel shadding and LUT removed. Giving the scene a blue, cool tone felt more in line with a city late at night</small>
 
 I knew I wanted some animation for this particular scene so I also added a swinging lantern effect using a timeline node to swing them back and forth. I gave each BP a public var for the swing amount to give them a little bit of variety. This could have been better but given they weren't the focus I didn't feel like customizing it further.
 

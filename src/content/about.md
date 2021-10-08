@@ -18,9 +18,9 @@ When I'm not being a front end developer I love 3D technology, photography, work
 
 <div class="flex flex-col space-y-1">
 <h3>Some of the places you can find more of my work</h3>
-<a href="https://www.artstation.com/rustbucket" target="_blank" class="underline">Artstation Portfolio</a>
-<a href="https://www.behance.net/subreference" class="underline" target="_blank">Behance</a>
+<a href="https://www.artstation.com/rustbucket" target="_blank" class="underline">Artstation</a>
 <a href="https://sketchfab.com/rustbucket" class="underline" target="_blank">Sketchfab</a>
+<a href="https://www.behance.net/subreference" class="underline" target="_blank">Behance</a>
 <a href="https://www.instagram.com/helsinkizombiecollective/" class="underline" target="_blank">Instagram</a>
 </div>
 
