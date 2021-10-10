@@ -2,7 +2,7 @@
   "name": "russellmorgan.github.io",
   "version": "1.0.0",
   "description": "My github pages site",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,8 +20,8 @@
   "homepage": "https://github.com/russellmorgan/russellmorgan.github.io#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "autoprefixer": "^10.3.4",
-    "postcss": "^8.3.6",
-    "tailwindcss": "^2.2.9"
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.9",
+    "tailwindcss": "^2.2.16"
   }
 }
