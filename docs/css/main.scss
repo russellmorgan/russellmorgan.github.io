@@ -1,0 +1,45 @@
+@import "mq";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+strong {
+  font-weight: 500;
+}
+
+.post {
+  p {
+    margin: 1.25rem auto 1.25rem auto;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+
+.footer img {
+  width: 1.25rem;
+  height: auto;
+}
+
+header {
+  //responsive if I ned to add item to main nav
+  //@include mq($from: tablet) {
+    li {
+      border-left: 1px solid #9ca3af;
+      padding: 0.25rem 0 0.25rem 1.25rem;
+      &:last-child {
+        border-right: 1px solid #9ca3af;
+        padding-right: 1.25rem;
+      }
+    }
+  //}
+}
