@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/tailwind.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;400;500&display=swap"
+    rel="stylesheet">
+  <base target="_blank"> 
+  <title>Magicavoxel and threeJS</title>
+</head>
+<body>
+  <div class="flex flex-col">
+    <a name="top"></a>
+<!-- header & navigation -->
+<header class="text-sm">
+  <ul class="flex space-x-5 border-gray-400 border-b">
+    <li><a href="/" target="_self" >home</a></li>
+    <li><a href="/content/about/" target="_self" >about</a></li>
+    <li><a href="/posts/" target="_self" >posts</a></li>
+  </ul>
+</header>
+    <!-- content here -->
+    <div class="flex-1 px-5 lg:px-10">
+      <div class="container">
+        <div class="lg:w-3/4 post-intro border border-gray-400 my-10">
+          <h2 class="text-xl p-5 border-b border-gray-400">Magicavoxel and threeJS</h2>
+          <div class="p-5 post"><script src="https://cdn.jsdelivr.net/npm/three@0.133.1/build/three.min.js"></script>
+<script src="https://unpkg.com/three/examples/js/loaders/GLTFLoader.js"></script>
+<script>
+let camera, scene, renderer, loader, canvas, model;
+let geometry, material, mesh;
+
+// Create the threeJS scene after everything has loaded
+document.addEventListener('DOMContentLoaded', (event) => {
+  init();
+})
+
+
+function init() {
+
+  canvas = document.getElementById("webgl");
+  scene = new THREE.Scene();
+
+  loader = new THREE.GLTFLoader();
+
+	camera = new THREE.PerspectiveCamera( 55, 2, 0.1, 100 );
+  camera.position.z = 20;
+  camera.position.y = 15;
+  camera.lookAt(0, 0, 0);  
+
+  const directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
+  directionalLight.position.set(-1, 2, 1);
+  scene.add( directionalLight );
+
+	renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.setSize( (canvas.clientWidth)-40, 640 );
+	renderer.setAnimationLoop( animation );
+	canvas.appendChild( renderer.domElement );
+
+  loader.load( '/img/posts/magicavoxel/temple.glb', function ( gltf ) {
+    model = gltf.scene
+    scene.add( model );
+  }, undefined, function ( error ) {
+    console.error( 'WTF!???'+error );
+  } );
+
+}
+
+function animation( time ) {
+  if(model) {
+    model.rotation.y = time / 5000;
+  }
+	renderer.render( scene, camera );
+
+}
+</script>
+<p>Everything I've learned about threeJS</p>
+<div id="webgl"></div></div>
+          <a target="_self" class="hover:bg-black hover:text-white block mt-5 py-2 px-5 border-t border-gray-400 text-xs" href="#top">back to top</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="py-10 px-10">
+  <span class="text-xs">Made in NYC.</span>
+  <div class="flex footer space-x-2 mt-2">
+    <a href="https://github.com/russellmorgan" target="_new"><img src="/img/logos/github.svg" /></a>
+    <a href="https://www.linkedin.com/in/russell-morgan1971" target="_new"><img src="/img/logos/linkedin.svg" /></a>
+    <a href="https://codepen.io/rustbucket/" target="_new"><img src="/img/logos/codepen.svg" /></a>
+    <a href="https://twitter.com/rustbucket" target="_new"><img src="/img/logos/twitter.svg" /></a>
+  </div>
+</footer>
+  </div>
+</body>
+</html>
