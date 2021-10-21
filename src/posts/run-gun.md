@@ -1,7 +1,7 @@
 ---
 layout: post.html
 title: Run and Gun VR Game 
-intro: When the Oculus Quest got announced I knew I wanted to make something for the platform using Unreal Engine, I just wasn't sure what. Fast forward to a couple of months playing with my new toy and I realized this was the best workout device ever created for nerds like me who hate the sight of a gym. After a lot of sweating to beat Saber and FitXR I started to wonder if I could make something more "game like" and less abstract than those titles. I also play a fair number of casual mobile games and hit on the idea of creating an endless runner in VR that also had guns.
+intro: When the Oculus Quest got announced I knew I wanted to make something for the platform using Unreal Engine. After a few months playing with my new toy and I realized this was the best workout device ever. After a lot of sweating to beat Saber and FitXR I started to wonder if I could make something more "game like" and less abstract than those titles. And so the idea of an endless runner with guns came to mind.
 thumbnail: thumbnail-run.jpg
 tags: 
 - post
