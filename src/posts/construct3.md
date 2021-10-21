@@ -1,7 +1,7 @@
 ---
 layout: post.html
 title: Impressions of Construct 3
-intro: In this post I want to go over my impressions of the Construct 3 game engine after making two hyper casual titles. Also a little about the game I made in phaserJS because it's interesting to compare code versus no-code ways of doing things.
+intro: I made two hyper casual games in Construct 3 and another using phaserJS. Here are my thoughts on what it's like to use C3 versus an open source engine.
 thumbnail: thumbnail-construct.png
 tags: 
 - post
