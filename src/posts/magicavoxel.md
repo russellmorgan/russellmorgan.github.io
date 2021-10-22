@@ -1,7 +1,7 @@
 ---
 layout: post.html
 title: Magicavoxel and threeJS
-intro: I made something in Magicavoxel. Now comes the part where I need to learn how to use threeJS.
+intro: I made something in Magicavoxel. Now comes the part where I need to learn how to use threeJS so I can display it.
 thumbnail: thumbnail-voxel.png
 tags: 
 - post

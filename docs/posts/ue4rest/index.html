@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/tailwind.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;400;500&display=swap"
+    rel="stylesheet">
+  <base target="_blank"> 
+  <title>Making REST API call in UE4</title>
+</head>
+<body>
+  <div class="flex flex-col">
+    <a name="top"></a>
+<!-- header & navigation -->
+<header class="text-sm">
+  <ul class="flex space-x-5 border-gray-400 border-b">
+    <li><a href="/" target="_self" >home</a></li>
+    <li><a href="/content/about/" target="_self" >about</a></li>
+    <li><a href="/posts/" target="_self" >posts</a></li>
+  </ul>
+</header>
+    <!-- content here -->
+    <div class="flex-1 px-5 lg:px-10">
+      <div class="container">
+        <div class="lg:w-3/4 post-intro border border-gray-400 my-10">
+          <h2 class="text-xl p-5 border-b border-gray-400">Making REST API call in UE4</h2>
+          <div class="p-5 post"><p>As any web developer will tell you, being able to make REST calls is a big part of the job. How else are you going to get and send the data you need anyway? In terms of a web browser this is a pretty trivial task, you can either rely on a 3rd party library or use the fetch API built into every modern browser engine.  Unreal Engine? Not so much, as I discovered recently while tasked with saving analytics data for a client project using the Oculus Quest.</p>
+<p>The initial plan had been to use Firebase or Google Analytics (mostly the same thing, I know) but we quickly discovered that those require Google Play services to be running on the host device, not something that is currently possible with the Quest. This led me down the road of just making the REST calls myself. A little googling around revealed there is no easy way to do this with just Blueprints, but plenty of C++ scripts I could use. What I did find though was a lifesaver in the Unreal Marketplace, a little plugin called &quot;<a href="https://github.com/GDi4K/unreal-fetch">Fetch - A simple HTTP clien</a>t&quot;. Not only is this a bargain at $5 but if you have any experience with REST on the web then everything is incredibly easy to understand and hook up.</p>
+<p><img src="/img/posts/ue4rest/post-success.png" alt="screenshot">
+<small>Holy crap, a successful REST call. In UE4.</small></p>
+<p><strong>Enter Air Table</strong></p>
+<p>After buying the plugin I needed a way to test it. Initially I thought about using Firebase but then remembered AirTable, which is probably the simplest way to save data out there. I had never actually used the service before but found setting up tables to be very intuitive. Once I had a test structure setup I tested the API calls via Postman to confirm I could read and write entries. This is an optional step but being able to see where you are going wrong with ay data calls and what the structure looks like it incredibly helpful. You can set it al up in UMG but that seems like a lot more work when an existing service is there to help you. Postman will also work with any API (or heck, build your own there) so it's really flexible.</p>
+<p>Once I had the data and API calls ready to go I created a basic UE project and loaded a UMG widget to the screen when the project launches. For this test I put all the fetch logic inside the UI. I created two super basic function, &quot;get air table info&quot; and &quot;get air table response&quot; that were tied to a text blocks so I could see what the rest call returned and the status of the response (that second function is important for debugging but should be removed/disabled when you have everything working).</p>
+<p><img src="/img/posts/ue4rest/get-rest.png" alt="screenshot">
+<small>Quickly make a fetch request for data with just three nodes</small></p>
+<p>I then added a button to be able to post a record to Air Table and hooked up the BP nodes available in the plugin to make the call the take the response and assign it to a variable. Amazingly it all worked as advertised on the first try. This almost never happens to me but I guess all these years as a front end web developer really paid off :-).  We ended up using AirTable for the analytics requirement and it was WAY simpler than any of the other options. This is not a public project so the traffic isn't going to be heavy but for anything bigger you'd probably want to use Firebase or something else.</p>
+<p><img src="/img/posts/ue4rest/post-rest.png" alt="screenshot">
+<small>This is how simple your BP can be to post data</small></p>
+<p><strong>Possible next steps</strong></p>
+<p>Now that I know how easy it is to get API data into Unreal I'd like to try some experiments. What would a Twitter feed look like in 3D for example? In VR or even AR? Could you take something like COVID data and display it in such a way that you can get a real sense of what the numbers are? Also, at the moment Epic's Online Services (EOS) doesn't have an easy BP interface but they do have an API that you could use in the browser, this could be a good way to get around that roadblock if you don't know C++. (There is an EOS BP plugin available but it's a little on the expensive side) Lots of interesting possibilities, hoping to dive into this a little more soon.</p>
+</div>
+          <a target="_self" class="hover:bg-black hover:text-white block mt-5 py-2 px-5 border-t border-gray-400 text-xs" href="#top">back to top</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="py-10 px-10">
+  <span class="text-xs">Made in NYC</span>
+  <div class="flex footer space-x-2 mt-2">
+    <a href="https://github.com/russellmorgan" target="_new"><img src="/img/logos/github.svg" /></a>
+    <a href="https://www.linkedin.com/in/russell-morgan1971" target="_new"><img src="/img/logos/linkedin.svg" /></a>
+    <a href="https://codepen.io/rustbucket/" target="_new"><img src="/img/logos/codepen.svg" /></a>
+    <a href="https://twitter.com/rustbucket" target="_new"><img src="/img/logos/twitter.svg" /></a>
+  </div>
+</footer>
+  </div>
+</body>
+</html>

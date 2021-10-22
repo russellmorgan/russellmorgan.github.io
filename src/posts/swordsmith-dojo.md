@@ -1,7 +1,7 @@
 ---
 layout: post.html
 title: Swordsmith's Dojo
-intro: A scene I built using Unreal 4.27 with some existing low poly assets. Basically a kit bash project that also spawned a music video. This is the first time I've tried to keep a record of my creative process and the first time I've written about a finished project.
+intro: This is a scene I built using Unreal with some existing low poly assets. Essentially a kit bash project that also spawned a sort of music video. 
 thumbnail: thumbnail-sword.jpg
 wtf: hello
 tags: 

@@ -1,7 +1,7 @@
 ---
 layout: post.html
 title: Run and Gun VR Game 
-intro: About the time I decided to make a game that combines endless running and guns for the Oculus Quest, having never done anything significant in VR before. 
+intro: This post is about the time I decided to make a game that combines endless running and guns for the Oculus Quest, having never done anything significant in VR before. 
 thumbnail: thumbnail-run.jpg
 tags: 
 - post
